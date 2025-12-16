@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FYP Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand">FYP Dashboard</div>
+
+      <div class="header-right">
+        <nav class="site-nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="npk.html" class="nav-link">NPK</a>
+          <a href="roots.html" class="nav-link">Roots</a>
+          <a href="analysis.html" class="nav-link">Analysis</a>
+        </nav>
+        <button class="logout-btn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Final Year Project</h1>
+    <h2>
+      Automated IoT-Enabled Soil and Root Interaction Analysis for Optimizing
+      Mycorrhizal Fungi Applications in Sustainable Agriculture
+    </h2>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <section class="card summary-video-card">
+
+      <!-- LEFT COLUMN -->
+      <div class="left-column">
+        <h3 class="section-title">Project Summary</h3>
+
+        <p class="summary-text">
+          This Final Year Project focuses on developing an IoT-based monitoring
+          system to study the relationship between soil nutrients (NPK) and root
+          progression after mycorrhizal fungi (AMF) application. Soil NPK readings
+          are collected using an NPK sensor and stored in Firebase, while root
+          growth is monitored through microscope images across scheduled weeks.
+          The collected data is visualized and analyzed to support decision-making
+          for sustainable agriculture practices.
+        </p>
+
+        <!-- Prototype Image -->
+        <div class="prototype-box">
+          <img
+            src="images/prototype.jpeg"
+            alt="Prototype Image"
+            class="prototype-img"
+          />
+          <p class="prototype-caption">
+            Prototype / Hardware Setup Image
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="right-column">
+        <h3 class="section-title">Demonstration Video</h3>
+
+        <video class="demo-video" controls>
+          <source src="images/demo-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <small>Developed by Nor Ana Binti Samsudin – UniKL BMI</small>
+  </footer>
+</body>
+</html>

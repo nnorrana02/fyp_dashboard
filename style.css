@@ -1,0 +1,430 @@
+/* =========================
+   RESET / BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #e7f4f3;
+  color: #143333;
+}
+
+a { color: inherit; }
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.site-header-inner {
+  max-width: 1400px;
+  margin: auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0a7a63;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #0a3f36;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.nav-link.active {
+  background: #0a7a63;
+  color: #fff;
+}
+
+.logout-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid #c5c5c5;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* =========================
+   MAIN WRAPPER
+========================= */
+.content {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* generic card helper (works with your existing HTML "card ...") */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* for pages like roots.html / analysis.html (your HTML uses: card page-card) */
+.page-card {
+  padding: 40px;
+}
+
+/* titles + paragraphs */
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.summary-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+
+/* =========================
+   INDEX PAGE (summary + video)
+========================= */
+.summary-video-card {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+}
+
+.prototype-box {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.prototype-img {
+  max-width: 100%;
+  height: 260px;
+  object-fit: contain;
+}
+
+.prototype-caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.demo-video {
+  width: 100%;
+  height: 360px;
+  border-radius: 14px;
+  background: #000;
+}
+
+/* =========================
+   MEDIA BOX (shared by NPK/ROOTS/ANALYSIS)
+========================= */
+.media-box {
+  text-align: center;
+}
+
+/* (kept for backward compatibility if you still use .media-img anywhere) */
+.media-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #000;
+}
+
+/* ✅ Use this for plots/graphs so NOTHING gets cut */
+.media-img-contain {
+  width: 100%;
+  height: 360px;          /* same “feel” as npk picture height */
+  object-fit: contain;    /* IMPORTANT: no cropping */
+  border-radius: 14px;
+  background: #ffffff;
+  display: block;
+}
+
+.media-caption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #5b7f79;
+}
+
+/* =========================
+   NPK PAGE (your existing layout)
+========================= */
+.npk-card {
+  padding: 40px;
+}
+
+.npk-top {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 34px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.npk-top-img {
+  text-align: center;
+}
+
+.npk-picture {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #000;
+  display: block;
+}
+
+.npk-img-caption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #5b7f79;
+}
+
+.npk-table-area {
+  margin-top: 10px;
+}
+
+/* =========================
+   NPK TABLE – CLEAN BORDER FIX
+========================= */
+
+.npk-table-wrap {
+  border: 1.5px solid #0a7a63;   /* single outer border */
+  border-radius: 14px;
+  overflow: hidden;              /* clips inner borders */
+  background: #fff;
+}
+
+.npk-table {
+  width: 100%;
+  border-collapse: separate;     /* IMPORTANT */
+  border-spacing: 0;             /* no gaps */
+  table-layout: fixed;
+}
+
+/* Inner grid lines only */
+.npk-table th,
+.npk-table td {
+  border-right: 1px solid #0a7a63;
+  border-bottom: 1px solid #0a7a63;
+  padding: 8px 6px;
+  font-size: 0.85rem;
+  text-align: center;
+  background: #fff;
+}
+
+/* Header styling */
+.npk-table th {
+  background: #0a7a63;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Remove extra borders at table edges */
+.npk-table th:last-child,
+.npk-table td:last-child {
+  border-right: none;
+}
+
+.npk-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Zebra rows */
+.npk-table tr:nth-child(even) td {
+  background: #f6fbfa;
+}
+
+/* Fix rowspan bottom double line */
+.npk-table td[rowspan] {
+  border-bottom: none;
+}
+
+
+/* =========================
+   ROOTS PAGE (your roots.html uses .two-col + media stack)
+========================= */
+
+/* ROOTS PAGE: 2 images side by side under the text */
+.roots-top {
+  margin-bottom: 18px;
+}
+
+.roots-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+/* Mobile: stack */
+@media (max-width: 900px) {
+  .roots-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   ANALYSIS PAGE (3 images grid)
+========================= */
+.analysis-header {
+  margin-bottom: 18px;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.note {
+  margin-top: 26px;
+  padding: 18px 18px;
+  border-radius: 14px;
+  background: #f5fbfa;
+  border: 1px solid #d7ece8;
+}
+
+.note h4 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.note ul {
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+.note li {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   TABLE BOX (if used)
+========================= */
+.table-box {
+  background: #f5fbfa;
+  border-radius: 14px;
+  padding: 16px;
+  overflow: auto;
+  min-height: 420px;
+}
+
+.table-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table-box th, .table-box td {
+  border-bottom: 1px solid #d7ece8;
+  padding: 10px 10px;
+  text-align: left;
+}
+
+.table-box th {
+  background: #e4f5f2;
+  font-weight: 800;
+}
+
+.placeholder {
+  color: #4f7f78;
+  font-weight: 600;
+}
+
+/* Excel iframe */
+.excel-frame {
+  width: 100%;
+  height: 420px;
+  border: none;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #4f7f78;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1100px) {
+  .analysis-grid {
+    grid-template-columns: 1fr; /* stack 3 plots vertically on smaller screens */
+  }
+}
+
+@media (max-width: 980px) {
+  .summary-video-card {
+    grid-template-columns: 1fr;
+  }
+  .demo-video {
+    height: 320px;
+  }
+  .table-box {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  .media-img-contain {
+    height: 320px;
+  }
+}

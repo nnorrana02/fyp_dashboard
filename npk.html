@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPK Readings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-npk">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand">FYP Dashboard</div>
+
+      <div class="header-right">
+        <nav class="site-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="npk.html">NPK</a>
+          <a class="nav-link" href="roots.html">Roots</a>
+          <a class="nav-link" href="analysis.html">Analysis</a>
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>1.0 NPK</h1>
+    <h2>Soil Nutrient NPK Readings (Firebase Records)</h2>
+  </section>
+
+  <!-- MAIN -->
+  <main class="content">
+    <section class="card npk-card">
+      <!-- TOP: Paragraph + Picture side-by-side -->
+      <div class="npk-top">
+        <div class="npk-top-text">
+          <h3 class="section-title">1.0 Soil Nutrient NPK Readings</h3>
+
+          <p class="summary-text">
+            This section presents the soil nutrient readings (Nitrogen, Phosphorus, Potassium) collected
+            using the NPK sensor and stored in Firebase. The readings are organized by week and used
+            to support interpretation of nutrient changes across the AMF treatment timeline.
+          </p>
+        </div>
+
+        <div class="npk-top-img">
+          <!-- Change filename if needed -->
+          <img
+            src="images/npk_graph.png"
+            alt="Soil NPK graph / related image"
+            class="npk-picture"
+          />
+          <p class="npk-img-caption">Soil NPK Readings vs Time Graph</p>
+        </div>
+      </div>
+
+      <!-- BOTTOM: Table under paragraph + picture -->
+      <div class="npk-table-area">
+        <h3 class="section-title">NPK Readings Table</h3>
+
+        <div class="npk-table-wrap">
+          <!-- Paste the table HTML here (I already generated it for you below) -->
+          <table class='npk-table'>
+            <thead>
+              <tr>
+                <th>Plant Types</th>
+                <th>Week</th>
+                <th>Nitrogen R1</th>
+                <th>Phosphorus R1</th>
+                <th>Potassium R1</th>
+                <th>Nitrogen R2</th>
+                <th>Phosphorus R2</th>
+                <th>Potassium R2</th>
+                <th>Nitrogen R3</th>
+                <th>Phosphorus R3</th>
+                <th>Potassium R3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Chilli A (4 rows) -->
+              <tr>
+                <td rowspan="4">Chilli A</td>
+                <td>0</td><td>18.86</td><td>31.94</td><td>68.8</td><td>18.86</td><td>31.94</td><td>68.8</td><td>18.85</td><td>31.93</td><td>68.8</td>
+              </tr>
+              <tr>
+                <td>3</td><td>19.16</td><td>32.4</td><td>75.12</td><td>19.16</td><td>32.4</td><td>75.12</td><td>19.16</td><td>32.4</td><td>75.12</td>
+              </tr>
+              <tr>
+                <td>6</td><td>24.32</td><td>36.1</td><td>76.37</td><td>24.32</td><td>36.1</td><td>76.37</td><td>24.33</td><td>36.1</td><td>76.36</td>
+              </tr>
+              <tr>
+                <td>9</td><td>23.9</td><td>32.05</td><td>72.9</td><td>23.9</td><td>32.05</td><td>72.9</td><td>23.9</td><td>32.06</td><td>72.9</td>
+              </tr>
+
+              <!-- Chilli B (4 rows) -->
+              <tr>
+                <td rowspan="4">Chilli B</td>
+                <td>0</td><td>19.46</td><td>32.18</td><td>66.1</td><td>19.46</td><td>32.18</td><td>66.1</td><td>19.46</td><td>32.18</td><td>66.15</td>
+              </tr>
+              <tr>
+                <td>3</td><td>19.67</td><td>31.97</td><td>74.98</td><td>19.67</td><td>31.98</td><td>74.98</td><td>19.68</td><td>31.98</td><td>74.98</td>
+              </tr>
+              <tr>
+                <td>6</td><td>23.81</td><td>37.2</td><td>75.35</td><td>23.81</td><td>37.2</td><td>75.35</td><td>23.82</td><td>37.21</td><td>75.36</td>
+              </tr>
+              <tr>
+                <td>9</td><td>23.05</td><td>32.6</td><td>70.04</td><td>23.05</td><td>32.6</td><td>70.04</td><td>23.06</td><td>32.6</td><td>70.04</td>
+              </tr>
+
+              <!-- Eggplant (4 rows) -->
+              <tr>
+                <td rowspan="4">Eggplant</td>
+                <td>0</td><td>20.21</td><td>32.3</td><td>69.9</td><td>20.22</td><td>32.3</td><td>69.9</td><td>20.22</td><td>32.3</td><td>69.9</td>
+              </tr>
+              <tr>
+                <td>3</td><td>20.9</td><td>32.89</td><td>75.41</td><td>20.9</td><td>32.89</td><td>75.41</td><td>20.9</td><td>32.89</td><td>75.41</td>
+              </tr>
+              <tr>
+                <td>6</td><td>24.58</td><td>36.76</td><td>77.3</td><td>24.58</td><td>36.76</td><td>77.3</td><td>24.59</td><td>36.76</td><td>77.3</td>
+              </tr>
+              <tr>
+                <td>9</td><td>23.5</td><td>33.18</td><td>69.6</td><td>23.5</td><td>33.18</td><td>69.6</td><td>23.5</td><td>33.19</td><td>69.65</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Developed by Nor Ana Binti Samsudin | UniKL BMI</small>
+  </footer>
+
+  <script>
+    function logout() {
+      // keep your real logout logic if you use Firebase auth
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

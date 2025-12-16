@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>4.0 Analysis – FYP Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-analysis">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand">FYP Dashboard</div>
+
+      <div class="header-right">
+        <nav class="site-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="npk.html" class="nav-link">NPK</a>
+          <a href="roots.html" class="nav-link">Roots</a>
+          <a href="analysis.html" class="nav-link active">Analysis</a>
+        </nav>
+
+        <button id="logout-btn" class="logout-btn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>4.0 Analysis</h1>
+    <h2>Exploratory Correlation between Soil Nutrients and Root Morphology</h2>
+  </section>
+
+  <!-- MAIN -->
+  <main class="content">
+    <section class="card page-card">
+
+      <div class="analysis-header">
+        <h3 class="section-title">Correlation Analysis (Exploratory)</h3>
+        <p class="summary-text">
+          This section evaluates the relationship between soil nutrient readings (N, P, K)
+          and root morphology metrics (coverage percentage and branching points).
+          Correlations are interpreted as exploratory trends because nutrient uptake in
+          AMF-treated systems can occur efficiently at the root–fungus interface and may
+          not be fully represented by bulk soil concentration alone.
+        </p>
+      </div>
+
+      <div class="analysis-grid">
+
+        <div class="media-box">
+          <img
+            src="images/scatter_P_vs_branching.png"
+            alt="Scatter plot: Phosphorus vs root branching"
+            class="media-img-contain"
+          />
+          <p class="media-caption">Phosphorus (P) vs Root Branching Points (Week labels shown)</p>
+        </div>
+
+        <div class="media-box">
+          <img
+            src="images/scatter_P_vs_coverage.png"
+            alt="Scatter plot: Phosphorus vs root coverage"
+            class="media-img-contain"
+          />
+          <p class="media-caption">Phosphorus (P) vs Root Coverage (%) (Week labels shown)</p>
+        </div>
+
+        <div class="media-box">
+          <img
+            src="images/heatmap_correlation.png"
+            alt="Correlation heatmap between NPK and root metrics"
+            class="media-img-contain"
+          />
+          <p class="media-caption">Correlation Heatmap between NPK, Root Coverage, and Branching</p>
+        </div>
+
+      </div>
+
+      <div class="note">
+        <h4>Key Interpretation</h4>
+        <ul>
+          <li><strong>Coverage vs Branching</strong> shows a strong positive relationship, indicating that larger root area tends to have more branching.</li>
+          <li><strong>Phosphorus</strong> may show a weaker direct correlation with morphology because AMF can transfer P efficiently into the plant rather than leaving high residual soil P.</li>
+          <li>Results are used for <strong>trend interpretation</strong> rather than causal inference due to limited timepoints.</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <small>Developed by Nor Ana Binti Samsudin – UniKL BMI</small>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const btn = document.getElementById("logout-btn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        window.location.href = "login.html";
+      });
+    }
+  </script>
+</body>
+</html>

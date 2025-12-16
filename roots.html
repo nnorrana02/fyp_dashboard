@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>2.0 Roots – FYP Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-roots">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand">FYP Dashboard</div>
+
+      <div class="header-right">
+        <nav class="site-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="npk.html" class="nav-link">NPK</a>
+          <a href="roots.html" class="nav-link active">Roots</a>
+          <a href="analysis.html" class="nav-link">Analysis</a>
+        </nav>
+
+        <button id="logout-btn" class="logout-btn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>2.0 Roots</h1>
+    <h2>Root Morphology Metrics from Microscope Image Analysis</h2>
+  </section>
+
+  <!-- MAIN -->
+  <main class="content">
+    <section class="card page-card">
+
+      <!-- TEXT (TOP) -->
+      <div class="roots-top">
+        <h3 class="section-title">Root Development Summary</h3>
+
+        <p class="summary-text">
+          This page presents root morphology metrics extracted from microscope images after
+          AMF application. Image processing was used to quantify root coverage (percentage
+          of root pixels in the image) and root branching (estimated branch points from
+          skeletonization). These metrics provide a consistent way to compare root
+          progression across Week 3, Week 6, and Week 9.
+        </p>
+      </div>
+
+      <!-- IMAGES (SIDE BY SIDE) -->
+      <div class="roots-grid-2">
+        <div class="media-box">
+          <img
+            src="images/coverage_graph.png"
+            alt="Root coverage percentage vs time"
+            class="media-img-contain"
+          />
+          <p class="media-caption">Root Coverage (%) vs Time (Week 3, 6, 9)</p>
+        </div>
+
+        <div class="media-box">
+          <img
+            src="images/branching_graph.png"
+            alt="Root branching points vs time"
+            class="media-img-contain"
+          />
+          <p class="media-caption">Root Branching Points vs Time (Week 3, 6, 9)</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <small>Developed by Nor Ana Binti Samsudin – UniKL BMI</small>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const btn = document.getElementById("logout-btn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        window.location.href = "login.html";
+      });
+    }
+  </script>
+</body>
+</html>
