@@ -20,8 +20,7 @@
           <a class="nav-link" href="roots.html">Roots</a>
           <a class="nav-link" href="analysis.html">Analysis</a>
         </nav>
-
-        <button class="logout-btn" onclick="logout()">Logout</button>
+        <button id="logout-btn" class="logout-btn">Logout</button>
       </div>
     </div>
   </header>
@@ -137,10 +136,13 @@
     <small>Developed by Nor Ana Binti Samsudin | UniKL BMI</small>
   </footer>
 
+  <script src="main.js"></script>
   <script>
-    function logout() {
-      // keep your real logout logic if you use Firebase auth
-      window.location.href = "login.html";
+    const btn = document.getElementById("logout-btn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        window.location.href = "login.html";
+      });
     }
   </script>
 </body>

@@ -20,7 +20,7 @@
           <a href="roots.html" class="nav-link">Roots</a>
           <a href="analysis.html" class="nav-link">Analysis</a>
         </nav>
-        <button class="logout-btn">Logout</button>
+        <button id="logout-btn" class="logout-btn">Logout</button>
       </div>
     </div>
   </header>
@@ -81,5 +81,15 @@
   <footer>
     <small>Developed by Nor Ana Binti Samsudin – UniKL BMI</small>
   </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const btn = document.getElementById("logout-btn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        window.location.href = "login.html";
+      });
+    }
+  </script>
 </body>
 </html>

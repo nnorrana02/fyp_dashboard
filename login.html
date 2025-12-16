@@ -1,13 +1,18 @@
-<h1 style="color:red">TEST123</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login – FYP Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
 <body class="page-login">
   <div class="login-wrapper">
-    <!-- LEFT -->
     <div class="login-left">
       <div class="login-brand">FYP Dashboard</div>
       <h1 class="login-title">Soil &amp; Root Analysis</h1>
-      <p class="login-subtitle">
-        Please log in to view the dashboard.
-      </p>
+      <p class="login-subtitle">Please log in to view the dashboard.</p>
 
       <form id="login-form" class="login-form">
         <label class="login-label">
@@ -20,19 +25,12 @@
           <input type="password" id="password" required />
         </label>
 
-        <div class="login-row">
-          <label class="remember-me">
-            <input type="checkbox" />
-            Remember me
-          </label>
-          <span class="small-link">Only project owner can log in</span>
-        </div>
+        <p id="login-error" class="login-error"></p>
 
-        <button class="btn primary">Login</button>
+        <button id="login-btn" class="btn primary" type="submit">Login</button>
       </form>
     </div>
 
-    <!-- RIGHT -->
     <div class="login-right">
       <img src="images/plant-login.gif" alt="Plant" />
       <p class="login-right-caption">
@@ -40,4 +38,7 @@
       </p>
     </div>
   </div>
+
+  <script src="login.js"></script>
 </body>
+</html>
