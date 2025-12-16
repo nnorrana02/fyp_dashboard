@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>FYP Dashboard – Login</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
 <body class="page-login">
   <div class="login-wrapper">
-    <!-- LEFT: form -->
+    <!-- LEFT -->
     <div class="login-left">
       <div class="login-brand">FYP Dashboard</div>
       <h1 class="login-title">Soil &amp; Root Analysis</h1>
@@ -20,30 +11,32 @@
       <form id="login-form" class="login-form">
         <label class="login-label">
           Email Address
-          <input type="email" id="email" required placeholder="nnorrana02@gmail.com" />
+          <input type="email" id="email" required />
+        </label>
+
+        <label class="login-label">
+          Password
+          <input type="password" id="password" required />
         </label>
 
         <div class="login-row">
           <label class="remember-me">
-            <input type="checkbox" id="remember" />
-            <span>Remember me</span>
+            <input type="checkbox" />
+            Remember me
           </label>
           <span class="small-link">Only project owner can log in</span>
         </div>
 
-        <div class="login-buttons">
-          <button type="submit" id="login-btn" class="btn primary">Login</button>
-        </div>
-
-        <p id="login-error" class="login-error"></p>
+        <button class="btn primary">Login</button>
       </form>
     </div>
 
-    <!-- RIGHT: plant illustration -->
+    <!-- RIGHT -->
     <div class="login-right">
-      <div class="plant-hero">
-        <img src="images/plant-login.gif" alt="Plant illustration" />
-      </div>
+      <img src="images/plant-login.gif" alt="Plant" />
       <p class="login-right-caption">
         Monitoring soil NPK and root growth for sustainable agriculture.
-      </
+      </p>
+    </div>
+  </div>
+</body>
